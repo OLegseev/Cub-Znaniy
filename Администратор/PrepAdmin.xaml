@@ -1,0 +1,57 @@
+﻿<Page x:Class="Авторассылка.PrepAdmin"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+
+     FontFamily="{DynamicResource MaterialDesignFont}"
+      xmlns:local="clr-namespace:Авторассылка"
+      mc:Ignorable="d" 
+         d:DesignHeight="380" Background="{DynamicResource MaterialDesignPaper}" d:DesignWidth="640"
+      Title="PrepAdmin">
+
+    <Grid>
+        <Border CornerRadius="10" BorderThickness="2" Background="{DynamicResource MaterialDesignPaper}" BorderBrush="#FF306771" HorizontalAlignment="Center" VerticalAlignment="Top" Height="31" Width="620" Margin="0,10,0,0">
+
+        </Border>
+        <DataGrid Margin="10,46,115,10" CanUserAddRows="False" AutoGenerateColumns="False" IsReadOnly="True" FontFamily="Arial" x:Name="sst" SelectionChanged="sst_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Фио" Binding="{Binding Fio }" />
+                <DataGridTextColumn Header="Логин" Binding="{Binding Login}" />
+                <DataGridTextColumn Header="Роль" Binding="{Binding Role }" />
+                <DataGridTextColumn Header="Внутренний код" Binding="{Binding ID}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button
+            Style="{StaticResource MaterialDesignToolButton}" Margin="-12,10,584,338">
+            <materialDesign:PackIcon
+              Kind="Search"
+              Opacity=".56" />
+        </Button>
+        <TextBox
+            MinWidth="200"
+            Margin="39,15,45,0"
+            x:Name="Search"
+            FontFamily="Arial"
+            VerticalAlignment="Top"
+            materialDesign:HintAssist.Hint="Поиск..."
+            materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
+            BorderThickness="0" TextChanged="TextBox_TextChanged"  />
+        <Button
+        Margin="567,10,-14,338"
+        Panel.ZIndex="0"
+        Style="{StaticResource MaterialDesignToolForegroundButton}" Cursor="Hand">
+            <materialDesign:PackIcon
+          Kind="Send" />
+        </Button>
+        <Button Content="Добавить" HorizontalAlignment="Left" BorderBrush="#FF306771" Background="#0cf" Margin="530,46,0,0" VerticalAlignment="Top" Height="28" Width="100" Click="Button_Click" Cursor="Hand"/>
+        <Button Content="Удалить" HorizontalAlignment="Left" BorderBrush="#FF306771" Background="#0cf" Margin="530,79,0,0" VerticalAlignment="Top" Height="28" Width="100" Click="Button_Click_1"/>
+
+    </Grid>
+</Page>

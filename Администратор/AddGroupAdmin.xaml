@@ -1,0 +1,35 @@
+﻿<Page x:Class="Авторассылка.AddGroupAdmin"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+
+     FontFamily="{DynamicResource MaterialDesignFont}"
+      xmlns:local="clr-namespace:Авторассылка"
+      mc:Ignorable="d" 
+           d:DesignHeight="380" Background="{DynamicResource MaterialDesignPaper}" d:DesignWidth="640"
+      Title="AddGroupAdmin">
+
+    <Grid>
+        <TextBox Height="50" x:Name="gr" FontFamily="Arial" Background="White" materialDesign:HintAssist.Hint="Номер группы" Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="200" Margin="220,119,220,211"/>
+        <Button  FontFamily="Arial" Content="Добавить" BorderBrush="#FF306771" Background="#0cf"  HorizontalAlignment="Center" Margin="0,236,0,0" VerticalAlignment="Top" Width="150" Click="Button_Click"/>
+        <ComboBox
+            FontFamily="Arial"
+  materialDesign:ComboBoxAssist.MaxLength="2"
+  materialDesign:HintAssist.Hint="Направление"
+            x:Name="str"
+  materialDesign:HintAssist.HintOpacity=".26"
+  IsEditable="True" Margin="220,190,220,0" VerticalAlignment="Top">
+        </ComboBox>
+
+
+        <TextBlock  FontFamily="Arial" HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20"><Run Text="Добавит"/><Run Text="ь "/><Run Text="н"/><Run Text="ов"/><Run Language="ru-ru" Text="ую группу"/></TextBlock>
+
+    </Grid>
+</Page>

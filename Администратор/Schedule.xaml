@@ -1,0 +1,70 @@
+﻿<Page x:Class="Авторассылка.Администратор.Schedule"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+      xmlns:local="clr-namespace:Авторассылка.Администратор"
+      mc:Ignorable="d" 
+       d:DesignHeight="380" d:DesignWidth="640"
+      Title="Schedule">
+    <Grid>
+        <ListView x:Name="Rasp" MouseDoubleClick="Rasp_MouseDoubleClick">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+                    </StackPanel>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+                        <StackPanel>
+                            <TextBlock VerticalAlignment="Top" HorizontalAlignment="Center" Text="{Binding date_name}"></TextBlock>
+                            <TextBlock HorizontalAlignment="Center" Text="{Binding date_value}"></TextBlock>
+                        </StackPanel>
+                        <Border BorderThickness="1" BorderBrush="#7fd4e7" Grid.Row="1" Margin="0 2 0 2">
+                            <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center"  Text="{Binding zan1}"></TextBlock>
+                        </Border>
+                        <Border BorderThickness="1" BorderBrush="#7fd4e7" Grid.Row="2" Margin="0 2 0 2">
+                            <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding zan2}"></TextBlock>
+                        </Border>
+                        <Border BorderThickness="1" BorderBrush="#7fd4e7" Grid.Row="3" Margin="0 2 0 2">
+                            <TextBlock  TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding zan3}"></TextBlock>
+                        </Border>
+                        <Border BorderThickness="1" BorderBrush="#7fd4e7" Grid.Row="4" Margin="0 2 0 2">
+                            <TextBlock  TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center"  Text="{Binding zan4}"></TextBlock>
+                        </Border>
+                        <Border BorderThickness="1" BorderBrush="#7fd4e7" Grid.Row="5" Margin="0 2 0 2">
+                            <TextBlock  TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding zan5}"></TextBlock>
+                        </Border>
+                        <Border BorderThickness="1" BorderBrush="#7fd4e7" Grid.Row="6" Margin="0 2 0 2">
+                            <TextBlock  TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding zan6}"></TextBlock>
+                        </Border>
+                        <Border BorderThickness="1" BorderBrush="#7fd4e7" Grid.Row="7" Margin="0 2 0 2">
+                            <TextBlock  TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center"  Text="{Binding zan7}"></TextBlock>
+                        </Border>
+                        <Border BorderThickness="1" BorderBrush="#7fd4e7" Grid.Row="8" Margin="0 2 0 2">
+                            <TextBlock  TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding zan8}"></TextBlock>
+                        </Border>
+                        <Border BorderThickness="1" BorderBrush="#7fd4e7" Grid.Row="9" Margin="0 2 0 2">
+                            <TextBlock  TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding zan9}"></TextBlock>
+                        </Border>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>

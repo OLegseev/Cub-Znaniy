@@ -1,0 +1,47 @@
+﻿<Page x:Class="Авторассылка.GroupPrep"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+  
+     FontFamily="{DynamicResource MaterialDesignFont}"
+      xmlns:local="clr-namespace:Авторассылка"
+      mc:Ignorable="d" 
+      d:DesignHeight="344" Background="#7fd4e7" d:DesignWidth="600"
+      Title="GroupPrep">
+
+    <Grid>
+        <Border CornerRadius="10" BorderThickness="2" Background="#7fd4e7" BorderBrush="#FF306771" HorizontalAlignment="Left" VerticalAlignment="Top" Height="31" Width="446" Margin="10,10,0,0">
+
+        </Border>
+        <DataGrid Margin="10,46,115,10"/>
+        <Button
+            Style="{StaticResource MaterialDesignToolButton}" Margin="10,10,562,302">
+            <materialDesign:PackIcon
+              Kind="Search"
+              Opacity=".56" />
+        </Button>
+        <TextBox
+            MinWidth="200"
+            Margin="32,14,151,0"
+            VerticalAlignment="Top"
+            materialDesign:HintAssist.Hint="Поиск..."
+            materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
+            BorderThickness="0" />
+        <Button
+        Margin="456,10,97,302"
+        Panel.ZIndex="0"
+        Style="{StaticResource MaterialDesignToolForegroundButton}" Cursor="Hand">
+            <materialDesign:PackIcon
+          Kind="Send" />
+        </Button>
+        <Button Content="Студенты" HorizontalAlignment="Left" BorderBrush="#FF306771" Background="#0cf" Margin="490,46,0,0" VerticalAlignment="Top" Height="28" Width="100"/>
+
+    </Grid>
+</Page>
